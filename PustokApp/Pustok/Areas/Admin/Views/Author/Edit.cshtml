@@ -1,0 +1,17 @@
+﻿
+@model Author
+
+
+<div class="container">
+
+    <div class="row col-md-8">
+        <form asp-action="edit" method="post" class="form-control">
+            <label asp-for="FullName"></label>
+            <input asp-for="FullName" type="text" class="form-control my-2" />
+            <span class="text-danger" asp-validation-for="FullName"></span><br />
+            <button type="submit" class="btn btn-outline-success">Change</button>
+        </form>
+    </div>
+</div>
+
+

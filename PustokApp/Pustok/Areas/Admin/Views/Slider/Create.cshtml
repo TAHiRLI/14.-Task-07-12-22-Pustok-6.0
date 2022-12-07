@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewData["Title"] = "Create";
+    int lastSlide = ViewBag.lastSlide;
+}
+@model Slider
+
+
+
+<div class="container mt-5">
+    <div class="row justify-content-start">
+        <div class="col-md-8">
+            <form asp-action="create" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label asp-for="Title1">Title1</label>
+                    <input asp-for="Title1" class="form-control my-2" >
+                    <span asp-validation-for="Title1" class="text-danger"></span>
+
+                    <label asp-for="Title2">Title2</label>
+                    <input asp-for="Title2"  class="form-control my-2" >
+                    <span asp-validation-for="Title2" class="text-danger"></span>
+
+                    <label asp-for="Desc">Description</label>
+                    <input asp-for="Desc"  class="form-control my-2" >
+                    <span asp-validation-for="Desc" class="text-danger"></span>
+
+                    <label asp-for="BtnText">BtnText</label>
+                    <input asp-for="BtnText"  class="form-control my-2" >
+                    <span asp-validation-for="BtnText" class="text-danger"></span>
+
+                    <label asp-for="RedirectedUrl">RedirectedUrl</label>
+                    <input asp-for="RedirectedUrl" type="text" class="form-control my-2" >
+                    <span asp-validation-for="RedirectedUrl" class="text-danger"></span>
+
+                    <label asp-for="File">Image</label>
+                    <input asp-for="File" class="form-control my-2">
+                    <span asp-validation-for="File" class="text-danger"></span>
+
+                    <label asp-for="Order">Order</label>
+                    <input asp-for="Order"  value="@(lastSlide+1)" class="form-control my-2" >
+                    <span asp-validation-for="Order" class="text-danger"></span>
+
+               
+                </div>
+
+                <button type="submit" class="btn btn-primary">Add</button>
+            </form>
+        </div>
+    </div>
+
+</div>

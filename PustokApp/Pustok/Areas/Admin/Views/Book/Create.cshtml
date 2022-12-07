@@ -1,0 +1,102 @@
+﻿@{
+    ViewData["Title"] = "Create";
+}
+
+@model Book
+
+<div class="container mt-5">
+    <div class="row justify-content-start">
+        <div class="col-md-8">
+            <form asp-action="create" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label asp-for="Name">Name</label>
+                    <input asp-for="Name" class="form-control my-2">
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="AuthorId">Author</label>
+                    <select asp-for="AuthorId" class="form-control" id="exampleFormControlSelect1" asp-items=@(new SelectList(ViewBag.Authors, nameof(Author.Id),nameof(Author.FullName) ))>
+                    </select>
+                    <span asp-validation-for="AuthorId" class="text-danger"></span>
+
+                </div>
+                <div class="form-group">
+                    <label asp-for="GenreId">Genre</label>
+                    <select asp-for="GenreId" class="form-control" asp-items=@(new SelectList(ViewBag.Genres, nameof(Genre.Id),nameof(Genre.Name) ))>
+                    </select>
+                    <span asp-validation-for="GenreId" class="text-danger"></span>
+
+                </div>
+                <div class="form-group">
+                    <label asp-for="Description">Description</label>
+                    <textarea asp-for="Description" class="form-control my-2"></textarea>
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="CostPrice">CostPrice</label>
+                    <input asp-for="CostPrice" type="number" step="0.0001" class="form-control my-2">
+                    <span asp-validation-for="CostPrice" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="SalePrice">SalePrice</label>
+                    <input asp-for="SalePrice" type="number" step="0.0001" class="form-control my-2">
+                    <span asp-validation-for="SalePrice" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="DiscountPercent">Discount Percent</label>
+                    <input asp-for="DiscountPercent" type="number" step="0.0001" class="form-control my-2">
+                    <span asp-validation-for="DiscountPercent" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="StockStatus">Stock Status</label>
+                    <input asp-for="StockStatus" type="checkbox" class=" my-2">
+                    <span asp-validation-for="StockStatus" class="text-danger"></span> <br />
+                </div>
+                <div class="form-group">
+                    <label asp-for="IsSpecial">IsSpecial</label>
+                    <input asp-for="IsSpecial" class=" my-2">
+                    <span asp-validation-for="IsSpecial" class="text-danger"></span> <br />
+                </div>
+                <div class="form-group">
+                    <label asp-for="IsNew">IsNew</label>
+                    <input asp-for="IsNew" class=" my-2">
+                    <span asp-validation-for="IsNew" class="text-danger"></span> <br />
+                </div>
+                <div class="form-group">
+                    <label asp-for="PosterImg">PosterImg</label>
+                    <input asp-for="PosterImg" class=" my-2">
+                    <span asp-validation-for="PosterImg" class="text-danger"></span> <br />
+                </div>
+                <div class="form-group">
+                    <label asp-for="HoverImg">HoverImg</label>
+                    <input asp-for="HoverImg" class=" my-2">
+                    <span asp-validation-for="HoverImg" class="text-danger"></span> <br />
+                </div>
+                <div class="form-group">
+                    <label asp-for="ImageFiles">ImageFiles</label>
+                    <input asp-for="ImageFiles" class=" my-2">
+                    <span asp-validation-for="ImageFiles" class="text-danger"></span> <br />
+
+@*
+                    @foreach (var img in Model.ImageFiles)
+                    {
+                        <div>
+                            <img src="~/Uploads/Books/@img.FileName" width="250" />
+                            <input type="hidden" value="@img.FileName" />
+                        </div>
+                    }*@
+
+                </div>
+
+
+
+
+
+                <button type="submit" class="btn btn-primary">Add</button>
+            </form>
+        </div>
+    </div>
+
+</div>
+

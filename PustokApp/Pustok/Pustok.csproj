@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20221129135632_AuthorsTableCreated.cs" />
+    <Compile Remove="Migrations\20221129135632_AuthorsTableCreated.Designer.cs" />
+    <Compile Remove="Migrations\20221129190152_GenresTableCreated.cs" />
+    <Compile Remove="Migrations\20221129190152_GenresTableCreated.Designer.cs" />
+    <Compile Remove="Migrations\20221129190311_GenresTableCreated.cs" />
+    <Compile Remove="Migrations\20221129190311_GenresTableCreated.Designer.cs" />
+    <Compile Remove="Migrations\20221129191755_BooksTableCreated.cs" />
+    <Compile Remove="Migrations\20221129191755_BooksTableCreated.Designer.cs" />
+    <Compile Remove="Migrations\20221129202516_TablesConfigured.cs" />
+    <Compile Remove="Migrations\20221129202516_TablesConfigured.Designer.cs" />
+    <Compile Remove="Migrations\20221129203009_SlidersTableCreated.cs" />
+    <Compile Remove="Migrations\20221129203009_SlidersTableCreated.Designer.cs" />
+    <Compile Remove="Migrations\20221129203633_BtnPromotionsTableCreated.cs" />
+    <Compile Remove="Migrations\20221129203633_BtnPromotionsTableCreated.Designer.cs" />
+    <Compile Remove="Migrations\20221130192126_BaseEntityAdded.cs" />
+    <Compile Remove="Migrations\20221130192126_BaseEntityAdded.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.11" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.11">
+		
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.10" />
+  </ItemGroup>
+
+</Project>

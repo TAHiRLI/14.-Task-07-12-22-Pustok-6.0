@@ -1,0 +1,101 @@
+﻿@using Pustok.Areas.Admin.ViewModels
+@model PaginatedList<Book> 
+
+@{
+    ViewData["Title"] = "Index";
+    int order = (Model.PageIndex-1)*Model.PageSize ;
+}
+<main>
+    <div class="container-fluid px-4">
+
+        <div class="card mb-4">
+        </div>
+        <div class="card mb-4">
+            <div class="card-header row">
+                <div class="col-md-6">
+                    <i class="fas fa-table me-1"></i>
+                    DataTable Example
+                </div>
+                <div class="col-md-6 text-end">
+                    <a class="btn btn-success" asp-action="create" asp-controller="book"><i class="fas fa-plus"></i></a>
+                </div>
+
+            </div>
+            <div class="card-body">
+                <table class="table table-striped table-light" id="datatablesSimple">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Name</th>
+                            <th>Author Name</th>
+                            <th>Genre</th>
+
+                            <th>Cost Price</th>
+                            <th>Sale Price</th>
+                            <th>Discount Percent</th>
+                            <th>Image</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        @foreach (var book in Model)
+                        {
+                            order++;
+
+                            <tr>
+                                <td>@order</td>
+                                <td>@book.Name</td>
+                                <td>@book.Author.FullName</td>
+                                <td>@book.Genre.Name</td>
+                                <td>@book.CostPrice</td>
+                                <td>@book.SalePrice</td>
+                                <td>@book.DiscountPercent</td>
+                                <td> <img width="100px" src="~/Uploads/Books/@book.BookImages.FirstOrDefault(x=> x.PosterStatus == true)?.Image" /> </td>
+
+                                <td class=" row">
+                                    <a class="btn btn-danger trash-btn" asp-action="delete" asp-controller="book" asp-route-id="@book.Id">Delete</a>
+                                    <a class="btn btn-primary" asp-action="edit" asp-controller="book" asp-route-id="@book.Id">Edit</a>
+                                </td>
+
+                            </tr>
+
+                        }
+
+
+
+                    </tbody>
+                </table>
+                 <div class="col-12 ">
+
+                <nav class="m-auto" aria-label="...">
+                <ul class="pagination">
+
+                    <li class="page-item @(!Model.HasPrevious? "disabled":"")">
+                    <a class="page-link" asp-action="index" asp-controller="Book" asp-route-page="@(Model.PageIndex-1)">Previous</a>
+                    </li>
+                    
+
+               
+                
+                        @for (int i = 1; i <= Model.TotalPage; i++)
+                        {
+                        <li class="page-item @(Model.PageIndex == i? "active":"")"><a class="page-link" asp-action="index" asp-controller="Book" asp-route-page="@i">@i</a></li>
+
+                        }
+                        <li class="page-item @(!Model.HasNext? "disabled":"")">
+                        <a class="page-link" asp-action="index" asp-controller="Book" asp-route-page="@(Model.PageIndex+1)">Next</a>
+                        </li>
+                </ul>
+                </nav>
+                </div>
+
+                
+            </div>
+        </div>
+    </div>
+</main>
+
+
+
