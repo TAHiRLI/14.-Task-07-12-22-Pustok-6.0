@@ -42,10 +42,10 @@
                             <a asp-action="index" asp-controller="details" asp-route-id="@book.Id" class="hover-image">
                                 @if (book.BookImages.FirstOrDefault(x => x.PosterStatus == false)!=null){
 
-                                <img src="~/assets/image/products/@book.BookImages.FirstOrDefault(x=> x.PosterStatus== false).Image" >
+                                    <img src="~/Uploads/Books/@book.BookImages.FirstOrDefault(x=> x.PosterStatus== false).Image">
                                 }
                                 else{
-                                    <img src="~/assets/image/products/product-5.jpg">
+                                    <img src="~/Uploads/Books/product-5.jpg">
 
                                 }
 

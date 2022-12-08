@@ -23,7 +23,6 @@ namespace Pustok.Areas.Admin.Controllers
         public BookController(PustokDbContext context, IWebHostEnvironment env)
         {
             _context = context;
-            _env = env;
         }
         public IActionResult Index(int page = 1)
         {
@@ -113,6 +112,18 @@ namespace Pustok.Areas.Admin.Controllers
         [HttpPost]
         public IActionResult Edit(Book book)
         {
+            {
+                //TEST HERE !!!
+
+
+                // return Ok(book.HoverImg.ContentType); // return edir image/jpeg   // amma asagidaki case true olaraq calisir.
+                // if (book.HoverImg != null && book.HoverImg.ContentType != "image/jpeg" && book.HoverImg.ContentType != "image/png");
+                //  ModelState.AddModelError("HoverImg", "Test test");
+
+            }
+
+
+
             // CheckImgEdit(book.ImageFiles, book.PosterImg, book.HoverImg);
             if (!ModelState.IsValid)
             {
@@ -129,21 +140,13 @@ namespace Pustok.Areas.Admin.Controllers
             if (book.PosterImg != null)
             {
                 // remove old one
-                BookImage oldBookImage = _context.BookImages.FirstOrDefault(x => x.PosterStatus == true && x.Book.Id == book.Id);
-                if (oldBookImage != null)
+                BookImage BookImage = _context.BookImages.FirstOrDefault(x => x.PosterStatus == true && x.Book.Id == book.Id);
+                if (BookImage != null)
                 {
-                    FileManager.Delete(_env.WebRootPath, "Uploads/Books", oldBookImage.Image);
-                    _context.BookImages.Remove(oldBookImage);
+                    FileManager.Delete(_env.WebRootPath, "Uploads/Books", BookImage.Image);
+                    BookImage.Image = FileManager.Save(book.PosterImg, _env.WebRootPath, "Uploads/Books", 100);
                 }
 
-                //save new one
-                BookImage bookPoster = new BookImage
-                {
-                    Book = book,
-                    PosterStatus = true,
-                    Image = FileManager.Save(book.PosterImg, _env.WebRootPath, "Uploads/Books", 100)
-                };
-                _context.BookImages.Add(bookPoster);
 
 
             }
@@ -151,23 +154,12 @@ namespace Pustok.Areas.Admin.Controllers
             if (book.HoverImg != null)
             {
                 // remove old one
-                BookImage oldBookImage = _context.BookImages.FirstOrDefault(x => x.PosterStatus == false && x.Book.Id == book.Id);
-                if (oldBookImage != null)
+                BookImage BookImage = _context.BookImages.FirstOrDefault(x => x.PosterStatus == false && x.Book.Id == book.Id);
+                if (BookImage != null)
                 {
-                    FileManager.Delete(_env.WebRootPath, "Uploads/Books", oldBookImage.Image);
-                    _context.BookImages.Remove(oldBookImage);
-
+                    FileManager.Delete(_env.WebRootPath, "Uploads/Books", BookImage.Image);
+                    BookImage.Image = FileManager.Save(book.HoverImg, _env.WebRootPath, "Uploads/Books", 100);
                 }
-
-                // save new one
-                BookImage bookHover = new BookImage
-                {
-                    Book = book,
-                    PosterStatus = false,
-                    Image = FileManager.Save(book.HoverImg, _env.WebRootPath, "Uploads/Books", 100)
-                };
-                _context.BookImages.Add(bookHover);
-
             }
 
             if (book.ImageFiles != null)
@@ -191,16 +183,16 @@ namespace Pustok.Areas.Admin.Controllers
             {
                 book.BookImageIds = new List<int>();
             }
-            List<int> oldBookImages = _context.BookImages.Where(x => x.BookId == book.Id && x.PosterStatus ==  null).Select(x => x.Id).ToList();
+            List<int> oldBookImages = _context.BookImages.Where(x => x.BookId == book.Id && x.PosterStatus == null).Select(x => x.Id).ToList();
 
             List<int> removedBookImgs = oldBookImages.AsQueryable().Except(book.BookImageIds).ToList();
 
-          
 
-             // delete the removed images
+
+            // delete the removed images
             foreach (var bkImgId in removedBookImgs)
             {
-                var imageName = _context.BookImages.FirstOrDefault(x => x.Id == bkImgId ).Image;
+                var imageName = _context.BookImages.FirstOrDefault(x => x.Id == bkImgId).Image;
                 if (imageName != null)
                 {
                     FileManager.Delete(_env.WebRootPath, "Uploads/Books", imageName);
