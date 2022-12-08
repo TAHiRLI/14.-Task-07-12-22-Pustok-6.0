@@ -23,6 +23,7 @@ namespace Pustok.Areas.Admin.Controllers
         public BookController(PustokDbContext context, IWebHostEnvironment env)
         {
             _context = context;
+            _env = env;
         }
         public IActionResult Index(int page = 1)
         {
@@ -47,7 +48,7 @@ namespace Pustok.Areas.Admin.Controllers
         public IActionResult Create(Book book)
         {
 
-            // CheckImg(book.ImageFiles, book.PosterImg, book.HoverImg);
+             CheckImg(book.ImageFiles, book.PosterImg, book.HoverImg);
 
             if (!ModelState.IsValid)
             {
@@ -64,7 +65,6 @@ namespace Pustok.Areas.Admin.Controllers
 
             BookImage bookPoster = new BookImage
             {
-                Book = book,
                 PosterStatus = true,
                 Image = FileManager.Save(book.PosterImg, _env.WebRootPath, "Uploads/Books", 100)
             };
@@ -116,15 +116,15 @@ namespace Pustok.Areas.Admin.Controllers
                 //TEST HERE !!!
 
 
-                // return Ok(book.HoverImg.ContentType); // return edir image/jpeg   // amma asagidaki case true olaraq calisir.
-                // if (book.HoverImg != null && book.HoverImg.ContentType != "image/jpeg" && book.HoverImg.ContentType != "image/png");
-                //  ModelState.AddModelError("HoverImg", "Test test");
+                //  return Ok(book.HoverImg.ContentType); // return edir image/jpeg   // amma asagidaki case true olaraq calisir.
+                //if (book.HoverImg != null && book.HoverImg.ContentType != "image/jpeg" && book.HoverImg.ContentType != "image/png") 
+                //  ModelState.AddModelError("HoverImg", "Test testim");
 
             }
 
 
 
-            // CheckImgEdit(book.ImageFiles, book.PosterImg, book.HoverImg);
+             CheckImgEdit(book.ImageFiles, book.PosterImg, book.HoverImg);
             if (!ModelState.IsValid)
             {
                 ViewBag.Genres = _context.Genres.ToList();
