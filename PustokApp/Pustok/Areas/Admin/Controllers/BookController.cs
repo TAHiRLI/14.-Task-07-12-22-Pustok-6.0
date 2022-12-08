@@ -48,7 +48,7 @@ namespace Pustok.Areas.Admin.Controllers
         public IActionResult Create(Book book)
         {
 
-            CheckImg(book.ImageFiles, book.PosterImg, book.HoverImg);
+            // CheckImg(book.ImageFiles, book.PosterImg, book.HoverImg);
 
             if (!ModelState.IsValid)
             {
@@ -113,7 +113,7 @@ namespace Pustok.Areas.Admin.Controllers
         [HttpPost]
         public IActionResult Edit(Book book)
         {
-            CheckImgEdit(book.ImageFiles, book.PosterImg, book.HoverImg);
+            // CheckImgEdit(book.ImageFiles, book.PosterImg, book.HoverImg);
             if (!ModelState.IsValid)
             {
                 ViewBag.Genres = _context.Genres.ToList();
@@ -122,16 +122,19 @@ namespace Pustok.Areas.Admin.Controllers
 
                 return View(model);
             }
-            book.BookImages = new List<BookImage>();
-          
-            
+
+
+
 
             if (book.PosterImg != null)
             {
                 // remove old one
                 BookImage oldBookImage = _context.BookImages.FirstOrDefault(x => x.PosterStatus == true && x.Book.Id == book.Id);
-                FileManager.Delete(_env.WebRootPath, "Uploads/Books",oldBookImage.Image);
-                _context.BookImages.Remove(oldBookImage);
+                if (oldBookImage != null)
+                {
+                    FileManager.Delete(_env.WebRootPath, "Uploads/Books", oldBookImage.Image);
+                    _context.BookImages.Remove(oldBookImage);
+                }
 
                 //save new one
                 BookImage bookPoster = new BookImage
@@ -140,16 +143,21 @@ namespace Pustok.Areas.Admin.Controllers
                     PosterStatus = true,
                     Image = FileManager.Save(book.PosterImg, _env.WebRootPath, "Uploads/Books", 100)
                 };
-                book.BookImages.Add(bookPoster);
+                _context.BookImages.Add(bookPoster);
+
 
             }
 
-            if(book.HoverImg != null)
+            if (book.HoverImg != null)
             {
                 // remove old one
                 BookImage oldBookImage = _context.BookImages.FirstOrDefault(x => x.PosterStatus == false && x.Book.Id == book.Id);
-                FileManager.Delete(_env.WebRootPath, "Uploads/Books", oldBookImage.Image);
-                _context.BookImages.Remove(oldBookImage);
+                if (oldBookImage != null)
+                {
+                    FileManager.Delete(_env.WebRootPath, "Uploads/Books", oldBookImage.Image);
+                    _context.BookImages.Remove(oldBookImage);
+
+                }
 
                 // save new one
                 BookImage bookHover = new BookImage
@@ -158,7 +166,7 @@ namespace Pustok.Areas.Admin.Controllers
                     PosterStatus = false,
                     Image = FileManager.Save(book.HoverImg, _env.WebRootPath, "Uploads/Books", 100)
                 };
-                book.BookImages.Add(bookHover);
+                _context.BookImages.Add(bookHover);
 
             }
 
@@ -168,11 +176,36 @@ namespace Pustok.Areas.Admin.Controllers
                 {
                     BookImage bookImage = new BookImage
                     {
-                        Book = book,
+                        BookId = book.Id,
                         PosterStatus = null,
                         Image = FileManager.Save(img, _env.WebRootPath, "Uploads/Books", 100)
                     };
-                    book.BookImages.Add(bookImage);
+                    _context.BookImages.Add(bookImage);
+                }
+            }
+
+
+
+
+            if (book.BookImageIds == null)
+            {
+                book.BookImageIds = new List<int>();
+            }
+            List<int> oldBookImages = _context.BookImages.Where(x => x.BookId == book.Id && x.PosterStatus ==  null).Select(x => x.Id).ToList();
+
+            List<int> removedBookImgs = oldBookImages.AsQueryable().Except(book.BookImageIds).ToList();
+
+          
+
+             // delete the removed images
+            foreach (var bkImgId in removedBookImgs)
+            {
+                var imageName = _context.BookImages.FirstOrDefault(x => x.Id == bkImgId ).Image;
+                if (imageName != null)
+                {
+                    FileManager.Delete(_env.WebRootPath, "Uploads/Books", imageName);
+                    _context.BookImages.Remove(_context.BookImages.FirstOrDefault(x => x.Id == bkImgId));
+
                 }
             }
 
@@ -180,24 +213,14 @@ namespace Pustok.Areas.Admin.Controllers
 
 
 
-            List<int> oldBookImages = _context.BookImages.Where(x => x.BookId == book.Id).Select(x => x.Id).ToList();
 
-            List<int> removedBookImgs = oldBookImages.AsQueryable().Except(book.BookImageIds).ToList();
+            book.ModifiedAt = DateTime.UtcNow.AddHours(4);
 
-            // delete the removed images
-            foreach (var bkImgId in removedBookImgs)
-            {
-                var imageName = _context.BookImages.FirstOrDefault(x => x.Id == bkImgId).Image;
-                FileManager.Delete(_env.WebRootPath, "Uploads/Books", imageName);
-                _context.BookImages.Remove(_context.BookImages.FirstOrDefault(x => x.Id == bkImgId));
-            }
+            _context.SaveChanges();
 
-
-
-
-            return Ok(book);
+            return RedirectToAction("Index");
         }
-        private void CheckImg(List<IFormFile> imageFiles, IFormFile posterImg, IFormFile hoverImg)
+        private void CheckImg(List<IFormFile>? imageFiles, IFormFile posterImg, IFormFile hoverImg)
         {
             if (posterImg == null)
                 ModelState.AddModelError("PosterImg", "This field is Required");
@@ -210,7 +233,7 @@ namespace Pustok.Areas.Admin.Controllers
             if (hoverImg == null)
                 ModelState.AddModelError("HoverImg", "This field is Required");
             else if (hoverImg.ContentType != "image/jpeg" && hoverImg.ContentType != "image/png")
-                ModelState.AddModelError("HoverImg", "File Type Must Be JPEG, JPG or PNG");
+                ModelState.AddModelError("PosterImg", "File test tes tes  Type Must Be JPEG, JPG or PNG");
             else if (hoverImg.Length > 2097152)
                 ModelState.AddModelError("HoverImg", "File size must be less than 2MB!");
 

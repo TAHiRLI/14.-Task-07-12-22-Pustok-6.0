@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Yxh0BTU7Z4VQ9sZ1RthRKrfSItFZZOKFlxayKGAd1mU=",
+  "Hash": "4OfXz39OZNXPXG8ZTLZRb+iYpGQE3eUqvaasxnh/H+I=",
   "Source": "Pustok",
   "BasePath": "_content/Pustok",
   "Mode": "Default",
@@ -1462,12 +1462,12 @@
       "OriginalItemSpec": "wwwroot\\assets\\js\\plugins.js"
     },
     {
-      "Identity": "C:\\Users\\Hp\\Desktop\\CodeAcadem\\BackEnd\\Tasks\\14. Task 07-12-22 Pustok v6\\PustokApp\\Pustok\\wwwroot\\Uploads\\Books\\2f9197a9-14e6-4cbd-aab2-a3941355667aicon1.png",
+      "Identity": "C:\\Users\\Hp\\Desktop\\CodeAcadem\\BackEnd\\Tasks\\14. Task 07-12-22 Pustok v6\\PustokApp\\Pustok\\wwwroot\\Uploads\\Books\\08b1b103-548d-40f0-a757-f70f1af12df3h3-team-img-2.png",
       "SourceId": "Pustok",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Hp\\Desktop\\CodeAcadem\\BackEnd\\Tasks\\14. Task 07-12-22 Pustok v6\\PustokApp\\Pustok\\wwwroot\\",
       "BasePath": "_content/Pustok",
-      "RelativePath": "Uploads/Books/2f9197a9-14e6-4cbd-aab2-a3941355667aicon1.png",
+      "RelativePath": "Uploads/Books/08b1b103-548d-40f0-a757-f70f1af12df3h3-team-img-2.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1476,15 +1476,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Uploads\\Books\\2f9197a9-14e6-4cbd-aab2-a3941355667aicon1.png"
+      "OriginalItemSpec": "wwwroot\\Uploads\\Books\\08b1b103-548d-40f0-a757-f70f1af12df3h3-team-img-2.png"
     },
     {
-      "Identity": "C:\\Users\\Hp\\Desktop\\CodeAcadem\\BackEnd\\Tasks\\14. Task 07-12-22 Pustok v6\\PustokApp\\Pustok\\wwwroot\\Uploads\\Books\\3478a62a-cfad-4fce-908e-a35b7dea7dd0icon3.png",
+      "Identity": "C:\\Users\\Hp\\Desktop\\CodeAcadem\\BackEnd\\Tasks\\14. Task 07-12-22 Pustok v6\\PustokApp\\Pustok\\wwwroot\\Uploads\\Books\\81828425-668b-4976-ba89-58e9c9b89e35h6-img-3.jpg",
       "SourceId": "Pustok",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Hp\\Desktop\\CodeAcadem\\BackEnd\\Tasks\\14. Task 07-12-22 Pustok v6\\PustokApp\\Pustok\\wwwroot\\",
       "BasePath": "_content/Pustok",
-      "RelativePath": "Uploads/Books/3478a62a-cfad-4fce-908e-a35b7dea7dd0icon3.png",
+      "RelativePath": "Uploads/Books/81828425-668b-4976-ba89-58e9c9b89e35h6-img-3.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1493,15 +1493,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Uploads\\Books\\3478a62a-cfad-4fce-908e-a35b7dea7dd0icon3.png"
+      "OriginalItemSpec": "wwwroot\\Uploads\\Books\\81828425-668b-4976-ba89-58e9c9b89e35h6-img-3.jpg"
     },
     {
-      "Identity": "C:\\Users\\Hp\\Desktop\\CodeAcadem\\BackEnd\\Tasks\\14. Task 07-12-22 Pustok v6\\PustokApp\\Pustok\\wwwroot\\Uploads\\Books\\3709b985-6ae4-4bd0-b777-172080929823icon4.png",
+      "Identity": "C:\\Users\\Hp\\Desktop\\CodeAcadem\\BackEnd\\Tasks\\14. Task 07-12-22 Pustok v6\\PustokApp\\Pustok\\wwwroot\\Uploads\\Books\\893cc6ee-383b-4657-9079-957595f31cb9h6-img-9.jpg",
       "SourceId": "Pustok",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Hp\\Desktop\\CodeAcadem\\BackEnd\\Tasks\\14. Task 07-12-22 Pustok v6\\PustokApp\\Pustok\\wwwroot\\",
       "BasePath": "_content/Pustok",
-      "RelativePath": "Uploads/Books/3709b985-6ae4-4bd0-b777-172080929823icon4.png",
+      "RelativePath": "Uploads/Books/893cc6ee-383b-4657-9079-957595f31cb9h6-img-9.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1510,15 +1510,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Uploads\\Books\\3709b985-6ae4-4bd0-b777-172080929823icon4.png"
+      "OriginalItemSpec": "wwwroot\\Uploads\\Books\\893cc6ee-383b-4657-9079-957595f31cb9h6-img-9.jpg"
     },
     {
-      "Identity": "C:\\Users\\Hp\\Desktop\\CodeAcadem\\BackEnd\\Tasks\\14. Task 07-12-22 Pustok v6\\PustokApp\\Pustok\\wwwroot\\Uploads\\Books\\5458f249-8ba2-4476-b37b-36e0f3289ef4support.png",
+      "Identity": "C:\\Users\\Hp\\Desktop\\CodeAcadem\\BackEnd\\Tasks\\14. Task 07-12-22 Pustok v6\\PustokApp\\Pustok\\wwwroot\\Uploads\\Books\\a6bac44b-850a-4314-bf03-bef5cf86c792h3-team-img-2.png",
       "SourceId": "Pustok",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Hp\\Desktop\\CodeAcadem\\BackEnd\\Tasks\\14. Task 07-12-22 Pustok v6\\PustokApp\\Pustok\\wwwroot\\",
       "BasePath": "_content/Pustok",
-      "RelativePath": "Uploads/Books/5458f249-8ba2-4476-b37b-36e0f3289ef4support.png",
+      "RelativePath": "Uploads/Books/a6bac44b-850a-4314-bf03-bef5cf86c792h3-team-img-2.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1527,15 +1527,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Uploads\\Books\\5458f249-8ba2-4476-b37b-36e0f3289ef4support.png"
+      "OriginalItemSpec": "wwwroot\\Uploads\\Books\\a6bac44b-850a-4314-bf03-bef5cf86c792h3-team-img-2.png"
     },
     {
-      "Identity": "C:\\Users\\Hp\\Desktop\\CodeAcadem\\BackEnd\\Tasks\\14. Task 07-12-22 Pustok v6\\PustokApp\\Pustok\\wwwroot\\Uploads\\Books\\5ca75794-0451-441c-b7af-577ae843f069icon3.png",
+      "Identity": "C:\\Users\\Hp\\Desktop\\CodeAcadem\\BackEnd\\Tasks\\14. Task 07-12-22 Pustok v6\\PustokApp\\Pustok\\wwwroot\\Uploads\\Books\\c43c01cd-8a2f-4472-8f5d-b7e7ec2a3eeeh6-img-4.jpg",
       "SourceId": "Pustok",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Hp\\Desktop\\CodeAcadem\\BackEnd\\Tasks\\14. Task 07-12-22 Pustok v6\\PustokApp\\Pustok\\wwwroot\\",
       "BasePath": "_content/Pustok",
-      "RelativePath": "Uploads/Books/5ca75794-0451-441c-b7af-577ae843f069icon3.png",
+      "RelativePath": "Uploads/Books/c43c01cd-8a2f-4472-8f5d-b7e7ec2a3eeeh6-img-4.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1544,15 +1544,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Uploads\\Books\\5ca75794-0451-441c-b7af-577ae843f069icon3.png"
+      "OriginalItemSpec": "wwwroot\\Uploads\\Books\\c43c01cd-8a2f-4472-8f5d-b7e7ec2a3eeeh6-img-4.jpg"
     },
     {
-      "Identity": "C:\\Users\\Hp\\Desktop\\CodeAcadem\\BackEnd\\Tasks\\14. Task 07-12-22 Pustok v6\\PustokApp\\Pustok\\wwwroot\\Uploads\\Books\\79c7a558-52c4-4581-b8e4-8d2ebb8b31c5finance management.jpg",
+      "Identity": "C:\\Users\\Hp\\Desktop\\CodeAcadem\\BackEnd\\Tasks\\14. Task 07-12-22 Pustok v6\\PustokApp\\Pustok\\wwwroot\\Uploads\\Books\\d5008f47-e379-4b4f-9496-ac88bab62bfch6-img-8.jpg",
       "SourceId": "Pustok",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Hp\\Desktop\\CodeAcadem\\BackEnd\\Tasks\\14. Task 07-12-22 Pustok v6\\PustokApp\\Pustok\\wwwroot\\",
       "BasePath": "_content/Pustok",
-      "RelativePath": "Uploads/Books/79c7a558-52c4-4581-b8e4-8d2ebb8b31c5finance management.jpg",
+      "RelativePath": "Uploads/Books/d5008f47-e379-4b4f-9496-ac88bab62bfch6-img-8.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1561,15 +1561,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Uploads\\Books\\79c7a558-52c4-4581-b8e4-8d2ebb8b31c5finance management.jpg"
+      "OriginalItemSpec": "wwwroot\\Uploads\\Books\\d5008f47-e379-4b4f-9496-ac88bab62bfch6-img-8.jpg"
     },
     {
-      "Identity": "C:\\Users\\Hp\\Desktop\\CodeAcadem\\BackEnd\\Tasks\\14. Task 07-12-22 Pustok v6\\PustokApp\\Pustok\\wwwroot\\Uploads\\Books\\8c250fb2-c461-4ac1-9517-b44b31ac6c59icon2.png",
+      "Identity": "C:\\Users\\Hp\\Desktop\\CodeAcadem\\BackEnd\\Tasks\\14. Task 07-12-22 Pustok v6\\PustokApp\\Pustok\\wwwroot\\Uploads\\Books\\d7e38c94-417a-483d-9926-d488b194664ah3-team-img-3.png",
       "SourceId": "Pustok",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Hp\\Desktop\\CodeAcadem\\BackEnd\\Tasks\\14. Task 07-12-22 Pustok v6\\PustokApp\\Pustok\\wwwroot\\",
       "BasePath": "_content/Pustok",
-      "RelativePath": "Uploads/Books/8c250fb2-c461-4ac1-9517-b44b31ac6c59icon2.png",
+      "RelativePath": "Uploads/Books/d7e38c94-417a-483d-9926-d488b194664ah3-team-img-3.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1578,15 +1578,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Uploads\\Books\\8c250fb2-c461-4ac1-9517-b44b31ac6c59icon2.png"
+      "OriginalItemSpec": "wwwroot\\Uploads\\Books\\d7e38c94-417a-483d-9926-d488b194664ah3-team-img-3.png"
     },
     {
-      "Identity": "C:\\Users\\Hp\\Desktop\\CodeAcadem\\BackEnd\\Tasks\\14. Task 07-12-22 Pustok v6\\PustokApp\\Pustok\\wwwroot\\Uploads\\Books\\a2778aa0-a0b0-4b43-9021-b37cc35a7a9dicon4.png",
+      "Identity": "C:\\Users\\Hp\\Desktop\\CodeAcadem\\BackEnd\\Tasks\\14. Task 07-12-22 Pustok v6\\PustokApp\\Pustok\\wwwroot\\Uploads\\Books\\d8f29e41-f171-4ef3-80fb-547bab391affh6-img-10.jpg",
       "SourceId": "Pustok",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Hp\\Desktop\\CodeAcadem\\BackEnd\\Tasks\\14. Task 07-12-22 Pustok v6\\PustokApp\\Pustok\\wwwroot\\",
       "BasePath": "_content/Pustok",
-      "RelativePath": "Uploads/Books/a2778aa0-a0b0-4b43-9021-b37cc35a7a9dicon4.png",
+      "RelativePath": "Uploads/Books/d8f29e41-f171-4ef3-80fb-547bab391affh6-img-10.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1595,15 +1595,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Uploads\\Books\\a2778aa0-a0b0-4b43-9021-b37cc35a7a9dicon4.png"
+      "OriginalItemSpec": "wwwroot\\Uploads\\Books\\d8f29e41-f171-4ef3-80fb-547bab391affh6-img-10.jpg"
     },
     {
-      "Identity": "C:\\Users\\Hp\\Desktop\\CodeAcadem\\BackEnd\\Tasks\\14. Task 07-12-22 Pustok v6\\PustokApp\\Pustok\\wwwroot\\Uploads\\Books\\ac4f6988-d628-4a2b-ae7a-11e73e322f21support.png",
+      "Identity": "C:\\Users\\Hp\\Desktop\\CodeAcadem\\BackEnd\\Tasks\\14. Task 07-12-22 Pustok v6\\PustokApp\\Pustok\\wwwroot\\Uploads\\Books\\ff48e85f-a04b-45df-8cdc-84b516316f39h3-team-img-4.png",
       "SourceId": "Pustok",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Hp\\Desktop\\CodeAcadem\\BackEnd\\Tasks\\14. Task 07-12-22 Pustok v6\\PustokApp\\Pustok\\wwwroot\\",
       "BasePath": "_content/Pustok",
-      "RelativePath": "Uploads/Books/ac4f6988-d628-4a2b-ae7a-11e73e322f21support.png",
+      "RelativePath": "Uploads/Books/ff48e85f-a04b-45df-8cdc-84b516316f39h3-team-img-4.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1612,58 +1612,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Uploads\\Books\\ac4f6988-d628-4a2b-ae7a-11e73e322f21support.png"
-    },
-    {
-      "Identity": "C:\\Users\\Hp\\Desktop\\CodeAcadem\\BackEnd\\Tasks\\14. Task 07-12-22 Pustok v6\\PustokApp\\Pustok\\wwwroot\\Uploads\\Books\\aec6a991-33be-40af-92d1-0db6aef93ccficon2.png",
-      "SourceId": "Pustok",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Hp\\Desktop\\CodeAcadem\\BackEnd\\Tasks\\14. Task 07-12-22 Pustok v6\\PustokApp\\Pustok\\wwwroot\\",
-      "BasePath": "_content/Pustok",
-      "RelativePath": "Uploads/Books/aec6a991-33be-40af-92d1-0db6aef93ccficon2.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Uploads\\Books\\aec6a991-33be-40af-92d1-0db6aef93ccficon2.png"
-    },
-    {
-      "Identity": "C:\\Users\\Hp\\Desktop\\CodeAcadem\\BackEnd\\Tasks\\14. Task 07-12-22 Pustok v6\\PustokApp\\Pustok\\wwwroot\\Uploads\\Books\\f4806f5c-df8c-4eaa-9aef-29c04ab77416support.png",
-      "SourceId": "Pustok",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Hp\\Desktop\\CodeAcadem\\BackEnd\\Tasks\\14. Task 07-12-22 Pustok v6\\PustokApp\\Pustok\\wwwroot\\",
-      "BasePath": "_content/Pustok",
-      "RelativePath": "Uploads/Books/f4806f5c-df8c-4eaa-9aef-29c04ab77416support.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Uploads\\Books\\f4806f5c-df8c-4eaa-9aef-29c04ab77416support.png"
-    },
-    {
-      "Identity": "C:\\Users\\Hp\\Desktop\\CodeAcadem\\BackEnd\\Tasks\\14. Task 07-12-22 Pustok v6\\PustokApp\\Pustok\\wwwroot\\Uploads\\Books\\fbf5eb83-0103-46fc-a729-85aa5fbc03eficon1.png",
-      "SourceId": "Pustok",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Hp\\Desktop\\CodeAcadem\\BackEnd\\Tasks\\14. Task 07-12-22 Pustok v6\\PustokApp\\Pustok\\wwwroot\\",
-      "BasePath": "_content/Pustok",
-      "RelativePath": "Uploads/Books/fbf5eb83-0103-46fc-a729-85aa5fbc03eficon1.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Uploads\\Books\\fbf5eb83-0103-46fc-a729-85aa5fbc03eficon1.png"
+      "OriginalItemSpec": "wwwroot\\Uploads\\Books\\ff48e85f-a04b-45df-8cdc-84b516316f39h3-team-img-4.png"
     },
     {
       "Identity": "C:\\Users\\Hp\\Desktop\\CodeAcadem\\BackEnd\\Tasks\\14. Task 07-12-22 Pustok v6\\PustokApp\\Pustok\\wwwroot\\Uploads\\Books\\product-1.jpg",

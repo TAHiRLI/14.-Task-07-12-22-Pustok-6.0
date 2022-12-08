@@ -68,11 +68,17 @@
                     <label asp-for="PosterImg">PosterImg</label>
                     <input asp-for="PosterImg" class=" my-2">
                     <span asp-validation-for="PosterImg" class="text-danger"></span> <br />
+                    <img src="~/Uploads/Books/@Model.BookImages.FirstOrDefault(x=>x.PosterStatus ==true)?.Image" width="250" />
+
                 </div>
                 <div class="form-group">
                     <label asp-for="HoverImg">HoverImg</label>
                     <input asp-for="HoverImg" class=" my-2">
                     <span asp-validation-for="HoverImg" class="text-danger"></span> <br />
+
+                    <img src="~/Uploads/Books/@Model.BookImages.FirstOrDefault(x=>x.PosterStatus ==false)?.Image" width="250" />
+
+
                 </div>
                 <div class="form-group">
                     <label asp-for="ImageFiles">ImageFiles</label>
@@ -80,7 +86,7 @@
                     <span asp-validation-for="ImageFiles" class="text-danger"></span> <br />
 
                     
-                    @foreach (var img in Model.BookImages)
+                    @foreach (var img in Model.BookImages.Where(x=>x.PosterStatus==null).ToList())
                     {
                         <div>
                             <img src="~/Uploads/Books/@img.Image" width="250" />
